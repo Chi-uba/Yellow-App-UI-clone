@@ -57,7 +57,7 @@ class _SupportScreenState extends State<SupportScreen> {
               child: SingleChildScrollView(scrollDirection: Axis.vertical,
                 child: Column(children: [
                   Container(height: 200,width:screnn_width ,
-                      child: const Expanded(child: Image(fit: BoxFit.cover,image: AssetImage('assets/Screenshot_20220117-164059_1642693197074.png')))),
+                      child: Image(fit: BoxFit.cover,image: AssetImage('assets/Screenshot_20220117-164059_1642693197074.png'))),
                   const SizedBox(height: 10,),
                   SupportTile('Name',_textEditingController1),
                   SupportTile('Subject',_textEditingController2),
