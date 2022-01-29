@@ -28,24 +28,25 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  final controller = PageController();
+
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: PageView(
-        controller: controller,
-          children :[
-            SplashScreen(),
-            WalletScreen(),
-            TransactionScreen(),
-            ProfileScreen(),
-            SupportScreen(),
-            DepositScreen(screenName: 'Withdraw ', description: "You're almost ready to start trading, please "
-            "completely your account setup to continue",),
-            DepositScreen(screenName: 'Deposit', description: "You're almost ready to start trading, please "
-                "completely your account setup to continue")
-      ]),
+      child: MaterialApp(
+        home: SplashScreen(),
+        routes: <String, WidgetBuilder> {
+          '/splash': (BuildContext context) => const SplashScreen(),
+          '/wallet': (BuildContext context) => const WalletScreen(),
+          '/transaction': (BuildContext context) => const TransactionScreen(),
+          '/profile': (BuildContext context) => ProfileScreen(),
+          '/support': (BuildContext context) => const SupportScreen(),
+          '/deposit': (BuildContext context) =>  DepositScreen(screenName: 'Deposit', description: "You're almost ready to start trading, please "
+              "completely your account setup to continue"),
+          '/withdraw': (BuildContext context) => DepositScreen(screenName: 'Withdraw ', description: "You're almost ready to start trading, please "
+              "completely your account setup to continue",),
+        },
+      ),
     );
   }
 }

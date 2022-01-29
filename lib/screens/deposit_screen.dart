@@ -23,7 +23,9 @@ class _DepositScreenState extends State<DepositScreen> {
             child: Column(mainAxisAlignment: MainAxisAlignment.start, crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBox(height: 20,),
-              GestureDetector( onTap: () {}, child: Icon(MdiIcons.chevronLeft, size: 40,),),
+              GestureDetector( onTap: () {
+                Navigator.pop(context);
+              }, child: Icon(MdiIcons.chevronLeft, size: 40,),),
               const SizedBox(height: 40,),
               Text('${widget.screenName}',style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),),
               SizedBox(height: 20,),

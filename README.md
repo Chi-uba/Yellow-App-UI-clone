@@ -2,7 +2,7 @@
 
 A clone of the Yellow Card App UI. 
 These are the UI to be cloned : 
-![Spalsh-Screen](readme-image-asset/splashscreen.png)
+![Spalsh-Screen](readme-image-asset/spalshscreen.png)
 ![Wallet-Screen](readme-image-asset/wallet.png)
 ![Transaction-Screen](readme-image-asset/TRANSACTION.png)
 ![Profile-Screen](readme-image-asset/profile.png)

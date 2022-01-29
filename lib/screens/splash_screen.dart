@@ -33,7 +33,9 @@ class _SplashScreenState extends State<SplashScreen> {
                   Padding(
                     padding: const EdgeInsets.all(15.0),
                     child: Row(
-                      children: [Expanded(child: FlatButton(onPressed: () {},
+                      children: [Expanded(child: FlatButton(onPressed: () {
+                          Navigator.pushReplacementNamed(context, '/wallet');
+                      },
                       height: 50,
                         shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(10.0))) ,
                         child: Text('Get Started', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),color: Colors.white,))
